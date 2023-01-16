@@ -1,0 +1,42 @@
+{
+  "name": "consultent-portal",
+  "version": "1.0.0",
+  "description": "Consultent Portal Desktop application to mantain clients and consultancy",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DipeshGandhi9/consultent-portal-electron.git"
+  },
+  "keywords": [
+    "Electron",
+    "Angular",
+    "NGXS",
+    "IndexedDB",
+    "Consultancy",
+    "Client",
+    "Manangement"
+  ],
+  "author": "Dipesh Gandhi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DipeshGandhi9/consultent-portal-electron/issues"
+  },
+  "homepage": "https://github.com/DipeshGandhi9/consultent-portal-electron#readme",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.4",
+    "@electron-forge/maker-deb": "^6.0.4",
+    "@electron-forge/maker-rpm": "^6.0.4",
+    "@electron-forge/maker-squirrel": "^6.0.4",
+    "@electron-forge/maker-zip": "^6.0.4",
+    "electron": "^22.0.2"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}
