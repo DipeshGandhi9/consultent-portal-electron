@@ -4,21 +4,29 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
 
+const iconPath =
+  process.platform !== "darwin"
+    ? "resources/icons/icon.ico"
+    : "resources/icons/icon.icns";
+
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    icon: __dirname + iconPath,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
   });
 
   // and load the index.html of the app.
-  mainWindow.loadFile("./resources/index.html");
+  mainWindow.loadFile("./resources/consultent-portal/index.html");
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
+
+  mainWindow.on("closed", () => app.quit());
 };
 
 // This method will be called when Electron has finished
